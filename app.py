@@ -8,11 +8,11 @@ async def run_memory_chat():
     """Run a chat using MCPAgent's built-in conversation memory."""
     load_dotenv()
     print("Initializing chat...")
-    client = MCPClient.from_config_file("./browser_mcp.json")
+    client = MCPClient.from_config_file("browser_mcp.json")
     llm_endpoint = HuggingFaceEndpoint(
-        repo_id="mistralai/Mistral-7B-Instruct-v0.2",
-        temperature=0.5,
-        max_new_tokens=512,
+        repo_id="HuggingFaceH4/zephyr-7b-beta",
+        temperature=0.3,
+        max_new_tokens=1024,
     )
     llm = ChatHuggingFace(llm=llm_endpoint)
     agent = MCPAgent(
