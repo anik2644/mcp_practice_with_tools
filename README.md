@@ -18,6 +18,22 @@ This project implements an intelligent conversational agent capable of processin
 - **dotenv**: Manages environment variables for API key management and configuration.
 - **asyncio**: Used for asynchronous operations to handle multiple queries concurrently.
 
+## MCP Servers Used
+
+The system integrates the following MCP servers:
+
+| MCP Server           | Purpose                                                                |
+|----------------------|------------------------------------------------------------------------|
+| **playwright**       | Handles browser-based automation tasks using Playwright.               |
+| **duckduckgo-search**| Performs web searches using DuckDuckGo.                                |
+| **airbnb**           | Retrieves Airbnb listings and related information.                     |
+
+
+## LLM Integration
+
+The system uses the **`google/flan-t5-base`** model for language understanding and response generation via HuggingFace's `pipeline` API.
+
+
 ## Prerequisites
 
 To run this project locally, you need the following:
